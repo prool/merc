@@ -150,6 +150,8 @@ int main( int argc, char **argv )
 #ifdef IMC
    imc_startup( FALSE, -1, FALSE );
 #endif
+   sprintf( log_buf,"Merc 2.2 is compiling by Prool at %s %s\nproolix@gmail.com www.prool.kharkov.org",__DATE__,__TIME__);
+   log_string( log_buf );
    sprintf( log_buf, "Merc is ready to rock on port %d.", port );
    log_string( log_buf );
    game_loop_unix( control );

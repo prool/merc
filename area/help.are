@@ -222,6 +222,8 @@ This entry contains the administrators of this Mud.
                                M          U          D
 
     24 Nov 1993    Merc 2.2  (Happy Thanksgiving!)  Kahn, Hatchet, Furey
+     4 Jun 2020    Adding UTF-8/cyr support and compiling in Ubuntu/Windows by Prool
+                   www.prool.kharkov.org
 
 By what name do you wish to be known? ~
 
