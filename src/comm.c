@@ -97,6 +97,7 @@ int isprool(char c) // prool's modif for isprint
 {
 if ((c<32)&&(c>=0)) return 0;
 if (c==-1) return 0;
+if (c==-2) return 0;
 if (c==-3) return 0;
 return 1;
 }
@@ -327,8 +328,20 @@ void game_loop_unix( int control )
          }
 
          read_from_buffer( d );
+
+
          if( d->incomm[0] != '\0' )
          {
+#if 0	 // begin prool: debugging output
+	 printf("prool debug incomm='%s' [ ", d->incomm);
+	 char *cc;
+	 cc=d->incomm;
+	 while (*cc)
+	 {
+		 printf("%02X ",*cc++);
+	 }
+	 printf(" ]\n");
+#endif	 // end prool
             d->fcommand = TRUE;
             stop_idling( d->character );
 
